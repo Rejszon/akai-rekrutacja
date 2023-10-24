@@ -13,3 +13,14 @@
 // Full final output of script:
 // Array ( [0] => Lorem [1] => Ipsum [2] => is [3] => simply [4] => dummy [5] => text [6] => of [7] => the [8] => printing [9] => and [10] => typesetting [11] => industry. )
 // Array ( [0] => Lorem [1] => Ipsum [3] => simply [4] => dummy [5] => text [8] => printing [10] => typesetting [11] => industry. )
+$sentance = "Lorem Ipsum is simply dummy text of the printing and typesetting industry";
+$words = explode(" ",$sentance);
+print_r($words);
+foreach ($words as $key => $word) {
+    if (strlen($word)<4) {
+        unset($words[$key]);
+    }
+}
+echo "<br>";
+print_r($words);
+
